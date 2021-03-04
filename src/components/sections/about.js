@@ -38,7 +38,7 @@ const StyledText = styled.div`
         content: '▹';
         position: absolute;
         left: 0;
-        color: var(--green);
+        color: var(--white);
         font-size: var(--fz-sm);
         line-height: 12px;
       }
@@ -60,7 +60,6 @@ const StyledPic = styled.div`
     position: relative;
     width: 100%;
     border-radius: var(--border-radius);
-    background-color: var(--green);
 
     &:hover,
     &:focus {
@@ -70,23 +69,10 @@ const StyledPic = styled.div`
       &:after {
         top: 15px;
         left: 15px;
-      }
-
-      .img {
-        filter: none;
-        mix-blend-mode: normal;
+        z-index: -1;
       }
     }
 
-    .img {
-      position: relative;
-      border-radius: var(--border-radius);
-      mix-blend-mode: multiply;
-      filter: grayscale(100%) contrast(1);
-      transition: var(--transition);
-    }
-
-    &:before,
     &:after {
       content: '';
       display: block;
@@ -94,14 +80,6 @@ const StyledPic = styled.div`
       width: 100%;
       height: 100%;
       border-radius: var(--border-radius);
-      transition: var(--transition);
-    }
-
-    &:before {
-      top: 0;
-      left: 0;
-      background-color: var(--navy);
-      mix-blend-mode: screen;
     }
 
     &:after {
@@ -132,7 +110,21 @@ const About = () => {
     sr.reveal(revealContainer.current, srConfig());
   }, []);
 
-  const skills = ['JavaScript (ES6+)', 'HTML & (S)CSS', 'React', 'Vue', 'Node.js', 'WordPress'];
+  const skills = [
+    'Java',
+    'Python 3',
+    'C',
+    'C++',
+    'SQL',
+    'Maven',
+    'PHP',
+    'MATLAB',
+    'Eclipse',
+    'IntelliJ',
+    'Unix systems',
+    'WireShark',
+    'Spring Boot',
+  ];
 
   return (
     <StyledAboutSection id="about" ref={revealContainer}>
@@ -141,22 +133,30 @@ const About = () => {
       <div className="inner">
         <StyledText>
           <div>
-            <p>Hello! I'm Brittany, a software engineer based in Boston, MA.</p>
-
             <p>
-              I enjoy creating things that live on the internet, whether that be websites,
-              applications, or anything in between. My goal is to always build products that provide
-              pixel-perfect, performant experiences.
+              My name is Julian, and I am a fourth-year engineering student located in Ottawa, ON.
             </p>
 
             <p>
-              Shortly after graduating from{' '}
-              <a href="https://www.ccis.northeastern.edu">Northeastern University</a>, I joined the
-              engineering team at <a href="https://www.upstatement.com">Upstatement</a> where I work
-              on a wide variety of interesting and meaningful projects on a daily basis.
+              I enjoy exploring and learning new technologies. I am always looking for ways to
+              sharpen my skills and to stay relative in the industry. I strive to be a competent
+              software developer that my future team can rely on.
             </p>
 
-            <p>Here are a few technologies I've been working with recently:</p>
+            <p>
+              Studying at <a href="https://carleton.ca/">Carleton University</a> has solidified my
+              understanding of what it takes in becoming a successful software developer. Through
+              pursuing my undergrad, I have worked with many relative industry related technologies.
+            </p>
+
+            <p>
+              Here are some skills and applications that I've practiced at school (although there
+              are many Carleton primary focuses on working with{' '}
+              <a href="https://www.geeksforgeeks.org/top-10-programming-languages-that-will-rule-in-2021/">
+                Java
+              </a>
+              ):
+            </p>
           </div>
 
           <ul className="skills-list">
